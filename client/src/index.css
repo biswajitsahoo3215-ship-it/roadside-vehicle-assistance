@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 18px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow:
+    0 5px 14px rgba(37, 99, 235, 0.22);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 11px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  color: #111827;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+textarea {
+  resize: vertical;
+}
+
+label {
+  font-weight: 600;
+  color: #374151;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 28px 0;
+}
+
+h1 {
+  color: #111827;
+  margin-top: 0;
+}
+
+h2 {
+  color: #1f2937;
+}
+
+h3 {
+  color: #374151;
+}
+
+p {
+  color: #4b5563;
+}
+
+/* Main page containers */
+
+#root > div {
+  min-height: 100vh;
+}
+
+/* Page spacing */
+
+body > #root {
+  min-height: 100vh;
+}
+
+/* Links */
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Checkbox styling */
+
+input[type="checkbox"] {
+  width: auto;
+  max-width: none;
+  margin-right: 7px;
+  accent-color: #2563eb;
+}
+
+/* Rating buttons */
+
+button[style*="fontSize"] {
+  box-shadow: none;
+  transform: none;
+}
+
+/* Leaflet map */
+
+.leaflet-container {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #dbe3ef;
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+/* Tables if added later */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background: #eff6ff;
+  color: #1e3a8a;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .leaflet-container {
+    height: 400px !important;
+  }
+}
